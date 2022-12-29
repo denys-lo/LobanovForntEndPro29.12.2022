@@ -1,0 +1,24 @@
+{
+  "name": "homeworks",
+  "version": "1.0.0",
+  "description": "Homeworks for Fornt-end pro course from Hillel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denys-lo/LobanovForntEndPro29.12.2022.git"
+  },
+  "author": "Denys Lobanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denys-lo/LobanovForntEndPro29.12.2022/issues"
+  },
+  "homepage": "https://github.com/denys-lo/LobanovForntEndPro29.12.2022#readme",
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
