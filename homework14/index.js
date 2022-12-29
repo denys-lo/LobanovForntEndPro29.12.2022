@@ -14,3 +14,41 @@ function sumOfNumbers(array) {
   console.log(sum / quantity);
 }
 sumOfNumbers(arr);
+// Написати функцію doMath(x, znak, y), яка отримує 3 аргументи:
+// числа x і y, рядок znak. У змінній znak може бути:
+// +, -, *, /, %, ^ (ступінь ).Вивести результат математичної дії,
+// вказаної в змінній znak.Обидва числа і знак виходять від користувача.
+const getX = +prompt('Provide first number:');
+const getZnak = prompt('Provide a math sign (+, -, *, /, %, ^):');
+const getY = +prompt('Provide second number:');
+
+function doMath(x, znak, y) {
+  if (Number.isNaN(x) || Number.isNaN(y)) {
+    console.log('You enetered something wrong, please reload the page and try again.');
+  } else {
+    switch (znak) {
+      case '+':
+        console.log(`${x} + ${y} = ${x + y}`);
+        break;
+      case '-':
+        console.log(`${x} - ${y} = ${x - y}`);
+        break;
+      case '*':
+        console.log(`${x} * ${y} = ${x * y}`);
+        break;
+      case '/':
+        console.log(`${x} / ${y} = ${x / y}`);
+        break;
+      case '%':
+        console.log(`${x} % ${y} = ${x % y}`);
+        break;
+      case '^':
+        console.log(`${x} ^ ${y} = ${x ** y}`);
+        break;
+      default:
+        console.log('You enetered something wrong, please reload the page and try again.');
+        break;
+    }
+  }
+}
+doMath(getX, getZnak, getY);
