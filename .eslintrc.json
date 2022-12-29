@@ -12,6 +12,7 @@
     "rules": {
         "linebreak-style": ["warn", "windows"],
         "no-console": "off",
+        "no-alert": "off",
         "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }
