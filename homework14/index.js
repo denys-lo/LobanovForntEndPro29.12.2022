@@ -52,3 +52,27 @@ function doMath(x, znak, y) {
   }
 }
 doMath(getX, getZnak, getY);
+
+// Написати функцію заповнення даними користувача двомірного масиву.
+// Довжину основного масиву і внутрішніх масивів задає користувач.
+// Значення всіх елементів всіх масивів задає користувач.
+const getLengthMainArray = +prompt('Provide the length of the main array:');
+const getLengthInternalArray = +prompt('Provide the length of the internal array:');
+function makeArray(lengthMainArray, lengthInternalArray) {
+  if (Number.isNaN(lengthMainArray) || Number.isNaN(lengthInternalArray)) {
+    return 'You enetered something wrong, please reload the page and try again.';
+  }
+
+  const newArr = [];
+  for (let i = 0; i < lengthMainArray; i++) {
+    newArr.push(new Array(lengthInternalArray));
+  }
+  for (let i = 0; i < newArr.length; i++) {
+    for (let j = 0; j < newArr[0].length; j++) {
+      const getItem = prompt('Enter anytinhg what you want to add to your array:');
+      newArr[i][j] = getItem;
+    }
+  }
+  return newArr;
+}
+console.log(makeArray(getLengthMainArray, getLengthInternalArray));
