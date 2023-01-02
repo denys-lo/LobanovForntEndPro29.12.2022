@@ -76,3 +76,25 @@ function makeArray(lengthMainArray, lengthInternalArray) {
   return newArr;
 }
 console.log(makeArray(getLengthMainArray, getLengthInternalArray));
+
+// Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом.
+// 'func(" hello world", ['l', 'd'])' поверне нам "heo wor".
+// Вихідний рядок та символи для видалення задає користувач.
+const getItem = prompt('Enter any sentence:');
+const getSymbols = prompt('Enter symbols you want to delete:');
+function deleteSymbols(item, symbols) {
+  const allSymbolsOfItem = item.toLowerCase().split('');
+  const symbolsForDelete = symbols.toLowerCase().replace(/ /g, '').split('');
+
+  for (let i = 0; i < allSymbolsOfItem.length; i++) {
+    for (let j = 0; j < symbolsForDelete.length; j++) {
+      if (allSymbolsOfItem[i] === symbolsForDelete[j]) {
+        allSymbolsOfItem.splice(i, 1);
+        i -= 1;
+        console.log(allSymbolsOfItem);
+      }
+    }
+  }
+  console.log(allSymbolsOfItem.join(''));
+}
+deleteSymbols(getItem, getSymbols);
