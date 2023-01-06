@@ -13,6 +13,7 @@
         "linebreak-style": ["warn", "windows"],
         "no-console": "off",
         "no-alert": "off",
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "func-names": ["error", "never"]
     }
 }
