@@ -2,9 +2,10 @@ const getNumber = +prompt('Enter any number: ');
 const getDegree = +prompt('Enter degree: ');
 
 function pow(num, degree) {
-  if (degree > 1) {
-    return pow(num * getNumber, degree - 1);
+  if (degree === 1) {
+    return num;
   }
-  return num;
+
+  return num * pow(num, degree - 1);
 }
 console.log(pow(getNumber, getDegree));
